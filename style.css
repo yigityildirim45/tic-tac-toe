@@ -1,0 +1,48 @@
+:root {
+    --golden-ratio: 1.618;
+    --primary-color: #ffffff; /* Default primary color (Blue Violet) */
+    --secondary-color: #ff69b4; /* Default secondary color (Hot Pink) */
+    --tertiary-color: #f7f7f7; /* Default background color (Light Blue) */
+    --quaternary-color: #282c34; /* Default text color (Light Pink) */
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--tertiary-color); /* Default background color */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, calc(100px * var(--golden-ratio)));
+    grid-gap: 5px;
+    margin-bottom: 10px;
+}
+
+.cell {
+    width: calc(100px * var(--golden-ratio));
+    height: 100px;
+    background-color: var(--secondary-color); /* Default secondary color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(24px * var(--golden-ratio));
+    cursor: pointer;
+    color: var(--primary-color); /* Default primary color */
+}
+
+p {
+    font-size: calc(24px * var(--golden-ratio));
+    color: var(--quaternary-color); /* Default text color */
+}
+
+.dark {
+    --primary-color: #282c34; /* Dark primary color */
+    --secondary-color: #f27474; /* Dark secondary color */
+    --tertiary-color: #e5e5e5; /* Light background color */
+    --quaternary-color:  #f7f7f7; /* Light text color */
+}
